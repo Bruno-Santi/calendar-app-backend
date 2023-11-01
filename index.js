@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const dbConnection = require("./database/config");
 require("dotenv").config();
 const app = express();
@@ -8,6 +9,7 @@ app.listen(PORT, () => {
   console.log(`Running on port ${PORT}`);
 });
 dbConnection();
+app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 
