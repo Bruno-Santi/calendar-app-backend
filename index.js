@@ -15,4 +15,4 @@ app.use(express.json());
 
 //Auth Routes //
 app.use("/api/auth", require("./routes/auth"));
-app.use("/events", require("./routes/events"));
+app.use("/api/events", require("./routes/events"));
